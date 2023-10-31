@@ -62,7 +62,7 @@ pip install promptmanager
 pmctl service start
 ```
 
-Open Web browser with this URL http://<your ip address>:9999/
+Open Web browser with this URL http://{your ip address}:9999/
 
 ### service start with a port
 
