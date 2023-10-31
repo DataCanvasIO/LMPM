@@ -1,0 +1,28 @@
+.fieldSort {
+  font-weight: 400;
+  color: @text65;
+  display: flex;
+  cursor: pointer;
+  line-height: 32px;
+  height: 32px;
+  .sortTitle {
+    padding: 0 8px;
+  }
+  .sortIcon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #bfbfbf;
+    font-size: 9px;
+    margin-top: 8px;
+    :global {
+      .anticon {
+        height: 8px;
+        font-size: 12px;
+      }
+    }
+    .iconActive {
+      color: @primary-color;
+    }
+  }
+}

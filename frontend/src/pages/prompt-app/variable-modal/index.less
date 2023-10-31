@@ -1,0 +1,23 @@
+.mainTable {
+  padding: 0 10px;
+  :global {
+    .ant-table-header {
+      .ant-table-cell {
+        background: @background04;
+        font-weight: 500;
+        color: @background85;
+        &::before {
+          background-color: transparent!important;
+        }
+      }
+    }
+    .ant-table-body {
+      overflow: auto!important;
+      .ant-table-cell {
+        font-weight: 400;
+        color: @background65;
+      }
+    }
+
+  }
+}

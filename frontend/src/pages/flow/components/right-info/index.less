@@ -1,0 +1,94 @@
+@import '../../../../styles/index';
+.scriptIO{
+	margin-top: 10px;
+	.scriptIOTitle {
+		display: flex;
+		justify-content: space-between;
+		.scriptIOText {
+			font-weight: 500;
+			color: #0F0F0F;
+			line-height: 20px;
+		}
+	}
+	.setting {
+		color: @primary-color;
+	}
+	
+	.ioList {
+		width: 100%;
+		margin-top: 16px;
+		.ioItem {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			&:last-child {
+				.name, .type {
+					border-bottom:  1px solid @text15;
+					// color: rgba(16,38,58,0.65);
+				}
+			}
+		}
+		.name, .type {
+			height: 32px;
+			width: 50%;
+			border: 1px solid @text15;
+			border-bottom: none;
+			line-height: 32px;
+			text-align: center;
+		}
+		.type {
+			border-left: none;
+		}
+	}
+}
+
+.configParams {
+	.rightItemTitle {
+		font-weight: 500;
+		color: #0F0F0F;
+		line-height: 20px;
+		margin-bottom: 16px;
+	}
+	.formItemTitle {
+		font-weight: 400;
+		color: rgba(16,38,58,0.65);
+		line-height: 20px;
+		margin-bottom: 4px;
+	}
+	:global {
+		.ant-upload {
+			width: 100%;
+		}
+		.ant-btn-default {
+      width: 100%;
+      color: @primary-color;
+      border-radius: 4px;
+      border: 1px solid @background15;
+    }
+    .anticon-delete,.anticon {
+      color: @primary-color;
+    }
+    .ant-upload-list-item-name {
+      font-weight: 400;
+      color: @background85;
+    }
+    .ant-upload-list-item-info {
+      background: #F9F7F8!important;
+      border-radius: 4px;
+      padding-left: 4px;
+    }
+    .ant-upload-list-item-card-actions-btn {
+      opacity: 1!important;
+    }
+	}
+}
+
+.ioNew {
+	text-align: right;
+	margin-bottom: 24px;
+	:global {
+		.ant-btn {
+			border-radius: 8px;
+		}
+	}
+}

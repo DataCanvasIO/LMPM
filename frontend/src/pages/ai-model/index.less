@@ -1,0 +1,179 @@
+.aiModelContainer {
+  height: 100%;
+  .modelHeader {
+    height: 80px;
+    padding: 0 64px;
+    background: @white100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0F0F0F;
+      .titleIcon {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+    .searchContainer {
+      :global {
+        .ant-input {
+          background: #F7F8FA;
+        }
+        .ant-input-search {
+          border-radius: 8px;
+          border: 1px solid @text15;
+        }
+        .ant-input-affix-wrapper {
+          height: 38px;
+          width: 280px;
+          vertical-align: middle;
+          background: #F7F8FA;
+          border-radius: 8px;
+          border-color: transparent;
+        }
+        .anticon-search {
+          color: @text15;
+        }
+      }
+      .addNewBtn {
+        width: 80px;
+        height: 38px;
+        font-weight: 400;
+        vertical-align: middle;
+        border-radius: 8px;
+        margin-left: 24px;
+      }
+    }
+  }
+  .listTitle {
+    width: 150px;
+    font-size: 14px;
+    font-weight: 400;
+    color: @text65;
+    padding: 24px 0 16px 0;
+    cursor: pointer;
+  }
+  .aiModelList {
+    margin: 0 0 0 62px;
+    overflow-y: auto;
+    height: calc(100% - 80px);
+    .modelItem {
+      margin-right: 62px;
+      height: 104px;
+      background: @white100;
+      border-radius: 8px;
+      padding: 24px 0 26px 30px;
+      margin-bottom: 24px;
+      position: relative;
+      .modelDefaultImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .modelTitle {
+        font-size: 14px;
+        font-weight: 500;
+        color: @text85;
+        margin-bottom: 16px;
+        .modelHandle {
+          float: right;
+          margin-right: 46px;
+          > span {
+            margin-left: 24px;
+          }
+          .default, .delete, .edit {
+            color: @primary-color;
+          }
+          .default, .notDelete {
+            color: rgba(15,15,15,0.3);
+          }
+        }
+      }
+      .modelDesc {
+        & > div {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 400;
+          color: @text65;
+          &.modelTime {
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+  .pagerContain {
+    float: right;
+    margin-right: 62px;
+    margin: 0 62px 20px 0;
+  }
+}
+.formContainer {
+  width: 616px;
+  margin: 0 auto;
+  .warningMsg {
+    padding-left: 16px;
+    width: 708px;
+    background: #F9F7F8;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #7340C8;
+    line-height: 36px;
+    margin-left: -47px;
+    margin-bottom: 40px;
+    .confModel {
+      display: inline-block;
+      .defaultValues {
+        margin-top: -12px;
+      }
+    }
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 30px;
+    }
+  }
+  .connectConfigure {
+    position: relative;
+    .circleLine {
+      position: absolute;
+      right: -20px;
+      top: 0;
+      cursor: pointer;
+    }
+    .tooltip {
+      position: absolute;
+      right: -200px;
+      top: 15px;
+      width: 200px;
+      padding: 20px;
+    }
+  }
+}
+.optionsPrompt {
+  margin-top: -25px;
+  padding-bottom: 10px;
+  .customizePrompt {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(16,38,58,0.65);
+  }
+}
+.connectConfiguration {
+  border: 1px solid @primary-color;
+  :global {
+      pre {
+      margin-bottom: 0;
+    }
+  }
+}
+.connectTextarea {
+  width: 436px;
+  height: 500px;
+}
+.empty {
+  height: calc(100% - 76px);
+}

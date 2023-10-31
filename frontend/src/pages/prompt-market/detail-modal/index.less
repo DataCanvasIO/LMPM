@@ -1,0 +1,75 @@
+.modalMain {
+  padding: 0 36px;
+}
+.promptDivider {
+  font-size: 18px!important;
+  font-weight: 600!important;
+  color: @text65!important;
+  .promptDividerIcon {
+    margin-left: 8px;
+    color: @primary-color;
+    cursor: pointer;
+    font-size: 12px;
+    position: relative;
+    bottom: 2px;
+  }
+  &::after {
+    border-color: @background15!important;
+  }
+}
+.promptText {
+  :global {
+    .ant-descriptions-item-content {
+      font-weight: 400;
+      color: @background65;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+  }
+}
+.promptDesc {
+  margin-bottom: 24px;
+  padding: 6px;
+}
+.variablesDesc {
+  margin-bottom: 24px;
+  :global {
+    .ant-table-body {
+      .ant-table-cell {
+        font-weight: 400;
+        color: @background65;
+      }
+    }
+    .ant-table-header {
+      .ant-table-cell {
+        background: @background04;
+        font-weight: 500;
+        color: @background85;
+        &::before {
+          background-color: transparent!important;
+        }
+      }
+    }
+  }
+}
+.infoDesc {
+  padding: 6px;
+  :global {
+    .ant-descriptions-item-label {
+      font-weight: 400;
+      color: @background65;
+    }
+    .ant-descriptions-item-content {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      font-weight: 400;
+      color: @background45;
+    }
+    .ant-typography {
+      font-weight: 400;
+      color: @background45;
+    }
+  }
+}

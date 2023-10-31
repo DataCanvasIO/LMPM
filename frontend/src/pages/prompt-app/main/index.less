@@ -1,0 +1,165 @@
+.appList {
+	height: 100%;
+	.title {
+    height: 81px;
+    background: #F9F7F8;
+    background-color: @white100;
+    line-height: 60px;
+    padding: 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .titleLeft {
+      .titleIcon {
+        font-size: 20px;
+        margin-right: 8px;
+      }
+      .titleText {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0F0F0F;
+        margin-right: 16px;
+        line-height: 28px;
+      }
+    }
+    .titleRight {
+      display: flex;
+      :global {
+        .ant-input-search {
+          border-radius: 8px;
+          border: 1px solid @text15;
+        }
+        .ant-input-affix-wrapper {
+          height: 38px;
+          width: 280px;
+          vertical-align: middle;
+          background: #F7F8FA;
+          border-radius: 8px;
+          border-color: transparent;
+        }
+        .anticon-search {
+          color: @text15;
+        }
+      }
+      input {
+        caret-color: @primary-color;
+        background: #F9F7F8;
+      }
+    }
+	}
+	.main {
+		height: calc(100% - 81px);
+		padding: 24px 64px;
+		overflow: auto;
+	}
+  .empty {
+    height: calc(100% - 56px);
+  }
+	.filter {
+		display: flex;
+		.filterItem {
+			margin-right: 10px;
+			cursor: pointer;
+			color: @text65;
+		}
+		.orderIcon {
+			cursor: pointer;
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			color: #bfbfbf;
+			font-size: 10px;
+			position: relative;
+			margin-left: 4px;
+			top: -4px;
+			.active {
+				color: @primary-color;
+			}
+			& > span:last-child {
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	.listItem {
+		margin-top: 10px;
+		background-color: @white100;
+		height: 107px;
+		padding: 24px 30px;
+		border-radius: 8px;
+		margin-bottom: 24px;
+		.itemTitle {
+			font-weight: 500;
+			line-height: 20px;
+      color: @text85;
+      position: relative;
+			.titleName{
+				font-size: 14px;
+        font-weight: 500;
+        color: @text85;
+        display: flex;
+        .nameText {
+          margin-right: 12px;
+          position: relative;
+          top: 2px;
+        }
+			}
+			.operations {
+				font-size: 16px;
+				position: absolute;
+        top: 0;
+        right: 0;
+				>span {
+					cursor: pointer;
+					margin-left: 24px;
+					height: 16px;
+					color: @primary-color;
+				}
+			}
+		}
+		.itemBottom {
+			margin-top: 16px;
+			.bottomInfo {
+				font-size: 14px;
+        display: flex;
+        .info {
+          flex: 1;
+          overflow: hidden;
+          display: flex;
+          font-weight: 400;
+          color: @text50;
+          .icon {
+            font-size: 16px;
+            vertical-align: text-bottom;
+            margin-right: 8px;
+          }
+          .path {
+            max-width: calc(100% - 46px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .copy {
+            margin-left: 8px;
+            color: @primary-color;
+            cursor: pointer;
+          }
+          .link {
+            color: rgba(30,85,255,0.65);
+            max-width: calc(100% - 24px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+          }
+        }
+        .infoPadding {
+          padding-right: 56px;
+        }
+			}
+		}
+	}
+	.pagi {
+		float: right;
+	}
+}

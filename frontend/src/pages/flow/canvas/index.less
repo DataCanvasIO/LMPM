@@ -1,0 +1,45 @@
+@import '../../../styles/index';
+.canvasNode {
+  width: 198px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box!important;
+  font-size: 12px;
+  background: @white100;
+  border: 1px solid @text30;
+  padding: 0 12px;
+  position: relative;
+  .icon {
+    margin-right: 4px;
+    font-size: 16px;
+    position: relative;
+    top: -2px;
+  }
+  &:hover {
+    border: 1px solid @primary-color;
+  }
+}
+.currNode {
+  border: 1px solid @primary-color;
+}
+.nodeMenu {
+  width: 100px;
+  height: 26px;
+  background: #FFFEFE;
+  box-shadow: 0px 0px 3px 0px rgba(216,216,216,0.5);
+  border-radius: 6px;
+  position: absolute;
+  left: 62px;
+  top: -36px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: default;
+  > span {
+    cursor: pointer;
+    color: @primary-color
+  }
+}

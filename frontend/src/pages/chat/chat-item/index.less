@@ -1,0 +1,287 @@
+.talkItem {
+  color: @black100;
+  font-size: 14px;
+  display: flex;
+}
+.assistantItem {
+  justify-content: flex-start;
+}
+.userItem {
+  justify-content: flex-end;
+}
+.talkDrawer {
+  position: relative;
+  padding: 0 120px;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  margin: 40px 0;
+  .drawerBar {
+    position: absolute;
+    top: 24px;
+    height: 1px;
+    opacity: 0.3;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, #f0f0f0, #b1b1b1, #fefefe) 1 1;
+    left: 0;
+    right: 0;
+  }
+  .drawerText {
+    font-size: 12px;
+    font-weight: 400;
+    background: #F9F7F8;
+    color: @text30;
+    position: relative;
+    padding: 0 16px;
+  }
+}
+.itemInfo {
+  max-width: 60%;
+  padding: 8px;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+.assistantInfo {
+  display: flex;
+  .itemLeft {
+    width: 36px;
+    height: 36px;
+    margin-right: 24px;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+    background: @white100;
+    text-align: center;
+  }
+  .itemLeftIcon {
+    line-height: 0;
+    font-size: 34px;
+  }
+  .itemLeftNum {
+    font-size: 16px;
+    font-weight: 400;
+    color: @primary-color;
+    line-height: 34px;
+  }
+  .itemRight {
+    flex: 1;
+    .rightOpeater {
+      margin-bottom: 4px;
+      height: 22px;
+      position: relative;
+      .operModel {
+        color: @text30;
+        cursor: pointer;
+        font-weight: 400;
+        position: absolute;
+        left: 0;
+        width: max-content;
+      }
+    }
+    .rightText {
+      background: @white100;
+      border: 1px solid #EAEAEA;
+      border-radius: 8px;
+      position: relative;
+      color: @black100;
+      padding: 8px 16px;
+      word-break: break-all;
+      .rightCopy {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        right: -32px;
+        top: 10px;
+        color: @primary-color;
+        cursor: pointer;
+      }
+      .rightDelete {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        right: -64px;
+        top: 10px;
+        color: @primary-color;
+        cursor: pointer;
+      }
+      .rightContext {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        width: 22px;
+        height: 16px;
+        border-radius: 0px 8px 0px 8px;
+        border: 1px solid #EAEAEA;
+        color: @primary-color;
+        text-align: center;
+        line-height: 12px;
+        font-size: 10px;
+      }
+      .rightTriangle {
+        height: 0px;
+        width: 0;
+        position: absolute;
+        border-right: 8px solid @white100;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        top: 10px;
+        left: -8px;
+        z-index: 2;
+      }
+      .rightTriangle1 {
+        height: 0px;
+        width: 0;
+        position: absolute;
+        border-right: 9px solid #EAEAEA;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        top: 9px;
+        left: -9px;
+        z-index: 1;
+      }
+      .error {
+        color: #ff4d4f;
+      }
+    }
+    .rightTextContext {
+      padding-right: 30px;
+    }
+    .rightRegenerate {
+      margin-top: 4px;
+      height: 22px;
+      position: relative;
+      .regenerateText {
+        color: @primary-color;
+        cursor: pointer;
+        font-weight: 400;
+        position: absolute;
+        left: 0;
+        width: max-content;
+      }
+      .regenerateDis {
+        color: @text30;
+        cursor: not-allowed;
+        font-weight: 400;
+        position: absolute;
+        left: 0;
+        width: max-content;
+      }
+    }
+  }
+}
+.userInfo {
+  display: flex;
+  .itemLeft {
+    flex: 1;
+    .leftOpeater {
+      margin-bottom: 4px;
+      font-weight: 400;
+      text-align: right;
+      height: 22px;
+      position: relative;
+      .operBox {
+        position: absolute;
+        right: 0;
+        display: flex;
+      }
+      .operText {
+        color: @primary-color;
+        cursor: pointer;
+        flex: 1;
+        width: 110px;
+      }
+      .operRole {
+        margin-left: 8px;
+        color: @text30;
+      }
+    }
+    .leftText {
+      background: #AB74E6;
+      border: 1px solid #AB74E6;
+      border-radius: 8px;
+      position: relative;
+      color: @white100;
+      padding: 8px 16px;
+      word-break: break-all;
+      .leftCopy {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: -32px;
+        top: 10px;
+        color: @primary-color;
+        cursor: pointer;
+      }
+      .leftContext {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 22px;
+        height: 16px;
+        border-radius: 8px 0px 8px 0px;
+        border: 1px solid #AB74E6;
+        color: @white100;
+        text-align: center;
+        line-height: 12px;
+        font-size: 10px;
+      }
+      .leftTriangle {
+        height: 0px;
+        width: 0;
+        position: absolute;
+        border-left: 8px solid #AB74E6;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        top: 10px;
+        right: -8px;
+        z-index: 2;
+      }
+      .leftTriangle1 {
+        height: 0px;
+        width: 0;
+        position: absolute;
+        border-left: 9px solid #AB74E6;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        top: 9px;
+        right: -9px;
+        z-index: 1;
+      }
+    }
+    .leftTextContext {
+      padding-left: 30px;
+    }
+    .leftPublish {
+      margin-top: 4px;
+      text-align: right;
+      height: 22px;
+      position: relative;
+      .publishText {
+        color: @primary-color;
+        cursor: pointer;
+        font-weight: 400;
+        position: absolute;
+        right: 0;
+        width: max-content;
+      }
+    }
+  }
+  .itemRight {
+    width: 36px;
+    margin-left: 24px;
+    font-size: 34px;
+    line-height: 0;
+    text-align: center;
+    .rightIcon {
+      border: 1px solid #EAEAEA;
+      border-radius: 18px;
+    }
+    .refine {
+      font-size: 14px;
+      margin-top: 20px;
+      color: #7340c8;
+      cursor: pointer;
+      font-weight: 400;
+      width: fit-content;
+    }
+  }
+}

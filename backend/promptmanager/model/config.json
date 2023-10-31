@@ -1,0 +1,53 @@
+{"config": "{\n    \"protocol\":  \"http\",\n    \"method\":  \"POST\",\n    \"url\":  \"https://api.openai.com/v1/chat/completions\",\n    \"header\":  {\n        \"ContentType\":  \"application/json\",\n        \"Authorization\":  \"Bearer ${OPENAI_API_KEY}\"\n    },\n    \"modelRole\":  {\n        \"user\":  \"user\",\n        \"system\":  \"system\",\n        \"assistant\":  \"assistant\"\n    },\n    \"requestBody\":  {\n        \"model\":  \"${model}\",\n        \"messages\":  ${message},\n        \"temperature\":  ${temperature},\n        \"stream\":  ${stream}\n    },\n    \"responseBody\":  {\n        \"id\":  \"chatcmpl-7lZq4UwSCrkvyOTUcyReAMXpAydSQ\",\n        \"object\":  \"chat.completion\",\n        \"created\":  \"1691573536\",\n        \"model\":  \"gpt-3.5-turbo-0613\",\n        \"choices\":  ${result},\n        \"usage\":  {\n            \"prompt_tokens\":  36,\n            \"completion_tokens\":  104,\n            \"total_tokens\":  140\n        }\n    },\n    \"responseErrorBody\":  {\n        \"error\":  {\n            \"message\":  \"${errorMessage}\",\n            \"type\":  \"invalid_request_error\",\n            \"param\":  null,\n            \"code\":  null\n        }\n    },\n    \"responseStreamBody\":  {\n        \"id\":  \"chatcmpl-7lZq4UwSCrkvyOTUcyReAMXpAydSQ\",\n        \"object\":  \"chat.completion\",\n        \"created\":  \"1691573536\",\n        \"model\":  \"gpt-3.5-turbo-0613\",\n        \"choices\":  ${stream_result}\n    }\n}",
+    "params": [
+        {
+            "name": "OPENAI_API_KEY",
+            "type": "Password",
+            "defaultValue": ""
+        },
+        {
+            "name": "model",
+            "type": "Select",
+            "defaultValue": "gpt-3.5-turbo-0613;gpt-3.5-turbo;gpt-3.5-turbo-16k-0613;gpt-3.5-turbo-16k;gpt-4-0613;gpt-4-32k-0613;gpt-4;gpt-4-32k"
+        },
+        {
+            "name": "message",
+            "type": "Jsonarray",
+            "defaultValue": [{"role": "${role}", "content": "${content}"}]
+        },
+        {
+            "name": "temperature",
+            "type": "Double",
+            "defaultValue": 0.7
+        },
+        {
+            "name": "stream",
+            "type": "Boolean",
+            "defaultValue": false
+        },
+        {
+            "name": "result",
+            "type": "Jsonarray",
+            "defaultValue": [{"index": 0, "message": {"role": "assistant", "content": "${result_content}"}, "finish_reason": "stop"}]
+        },
+        {
+            "name": "errorMessage",
+            "type": "String",
+            "defaultValue": null
+        },
+        {
+            "name": "stream_result",
+            "type": "Jsonarray",
+            "defaultValue": [
+                {
+                    "index": 0,
+                    "delta": {
+                        "role": "assistant",
+                        "content": "${stream_content}"
+                    },
+                    "finish_reason": null
+                }
+            ]
+        }
+    ]
+}

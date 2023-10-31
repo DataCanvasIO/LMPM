@@ -1,0 +1,119 @@
+.container {
+  width: 100%;
+  height: calc(100% - 64px);
+  background-color: #f9f7f8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .bread {
+    width: 100%;
+    line-height: 40px;
+  }
+  .content {
+    flex: 1;
+    width: 100%;
+    min-width: 1400px;
+    height: 100%;
+    overflow: auto;
+  }
+}
+.head {
+  padding: 0 64px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0F0F0F;
+  display: flex;
+  height: 64px;
+  background: @white100;
+  box-shadow: 0px 2px 12px 0px rgba(206,206,206,0.5);
+  position: relative;
+  z-index: 1;
+  .homeIcon {
+    cursor: pointer;
+    margin-right: 55px;
+    color: @primary-color;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .menuItems {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0F0F0F;
+    flex: 1;
+    :global {
+      .ant-menu-horizontal {
+        height: 40px;
+        margin-top: 12px;
+        line-height: 40px;
+        border-bottom: none;
+        .ant-menu-item, .ant-menu-submenu {
+          border-radius: 20px;
+        }
+        .ant-menu-item-selected {
+          line-height: 40px;
+          background: @color15;
+          color: @primary-color;
+          border-radius: 20px;
+          a {
+            color: @primary-color;
+            &:hover {
+              color: @primary-color;
+            }
+          }
+          &::after {
+            border: none;
+          }
+        }
+        .ant-menu-submenu {
+          a {
+            color: @black85;
+          }
+        }
+        .ant-menu-item{
+          margin: 0 10px;
+          &::after {
+            visibility: hidden;
+          }
+          a {
+            &:hover {
+              color: @primary-color;
+            }
+          }
+        }
+        .ant-menu-submenu {
+          padding-left: 7px;
+          .ant-menu-submenu-title {
+            .ant-menu-title-content {
+              margin-left: 13px;
+            }
+          }
+          &::after {
+            visibility: hidden;
+            left: 12px;
+          }
+        }
+        .ant-menu-item-active, .ant-menu-submenu-active, .ant-menu-submenu-selected {
+          line-height: 40px;
+          background: @color15;
+          color: @primary-color;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  .guideContain {
+    padding-top: 11px;
+    .questionContain {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 20px;
+      color: #0F0F0F;
+      &.active {
+        color: @primary-color;
+        background: rgba(115,64,200,0.15);
+      }
+    }
+  }
+}

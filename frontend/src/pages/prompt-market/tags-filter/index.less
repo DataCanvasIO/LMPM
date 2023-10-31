@@ -1,0 +1,90 @@
+.topFilter {
+  height: auto;
+  margin: 4px 0;
+  .foldIcon {
+    position: absolute;
+    top: 32px;
+    right: 65px;
+    color: @primary-color;
+    cursor: pointer;
+    font-size: 16px;
+    transform: rotateX(0deg);
+    transition: transform 0.3s;
+  }
+  .iconRot180 {
+    transform: rotateX(180deg);
+  }
+  .filterItem {
+    display: flex;
+    margin-bottom: 16px;
+    .filterItemTitle {
+      height: 32px;
+      width: 57px;
+      text-align: right;
+      font-weight: 500;
+      color: @text65;
+      line-height: 32px;
+    }
+    .filterItemContent {
+      height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: calc(100% - 169px);
+    }
+    .filterItemContentFold {
+      height: auto;
+      white-space: normal;
+    }
+    .filterItemFold {
+      width: 80px;
+      text-align: center;
+      position: relative;
+      top: 2px;
+      .iconRot {
+        transform: rotateX(0deg);
+        transition: transform 0.3s;
+        height: 14px;
+      }
+      .iconRot180 {
+        transform: rotateX(180deg);
+      }
+      button {
+        color: @primary-color;
+      }
+    }
+    .filterItemAdd {
+      font-size: 16px;
+      color: @primary-color;
+      margin-left: 16px;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+    :global {
+      .ant-tag {
+        margin: 4px 16px 6px 16px;
+        padding: 0px 16px;
+        height: 24px;
+        line-height: 24px;
+        font-weight: 400;
+        color: @text65;
+        border-radius: 13px;
+        cursor: pointer;
+        border: 1px solid @color15;
+        background: @white100;
+        box-sizing: content-box;
+        &:hover {
+          background: @color05;
+        }
+      }
+    }
+    .itemTagActive {
+      background: @color15;
+      color: @primary-color;
+    }
+  }
+}
+.topFilterHidden {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}

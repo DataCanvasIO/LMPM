@@ -1,0 +1,50 @@
+.varRow {
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 24px;
+  .varCol {
+    text-align: right;
+    color: @black85;
+    &:after {
+      content: ':';
+      position: relative;
+      top: -0.5px;
+      margin: 0 8px 0 2px;
+    }
+  }
+  .varInput {
+    border: none;
+    background-color: transparent!important;
+    color: @background65!important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis!important;
+    cursor: text;
+  }
+  :global {
+    .ant-typography {
+      color: @background65;
+      font-weight: 400;
+    }
+  }
+}
+.multSelect {
+  :global{
+    .ant-select-selection-item {
+      background: @color15;
+      border-radius: 13px;
+      color: @primary-color;
+      margin-right: 8px;
+    }
+    .ant-select-selection-item-content {
+      margin-right: 8px;
+    }
+  }
+  .formTableTit {
+    label {
+      position: relative;
+      top: 10px;
+    }
+  }
+}
+

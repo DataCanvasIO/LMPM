@@ -1,0 +1,164 @@
+
+@import '../../../styles/index';
+
+.leftTree {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+	.search {
+		border-bottom: 1px solid @text15;
+    .searchInput {
+      width: 280px;
+      height: 38px;
+      vertical-align: middle;
+      background: #F7F8FA;
+      border-radius: 8px;
+      margin: 15px 16px;
+      input {
+        background: transparent;
+      }
+    }
+		:global {
+			.ant-input-affix-wrapper {
+				border: none;
+			}
+		}
+	}
+	.list{
+		flex: 1 1 auto;
+		overflow: auto;
+		.dragNode {
+			width: 250px;
+			height: 30px;
+			line-height: 30px;
+			background: @white100;
+			border-radius: 4px;
+			border: 1px solid @text15;
+			padding: 0 12px;
+			color: @text65;
+			position: relative;
+			cursor: move;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&.readonly {
+				cursor: no-drop;
+			}
+			.dragIcon {
+				color: @text50;
+			}
+		}
+		.treeTitle {
+      display: flex;
+      justify-content: space-between;
+			.name {
+				color: @text65;
+        max-width: 150px;
+			}
+			.count {
+				float: right;
+				margin-right: 20px;
+				color: @text30;
+			}
+		}
+		.promptNode {
+			:global {
+				.ant-tree-indent-unit {
+					width: 0px;
+				}
+			}
+		}
+
+		:global{
+			.ant-tree .ant-tree-icon__customize {
+				display: none;
+			}
+			.anticon {
+				font-size: 12px;
+				color: @primary-color;
+			}
+			.ant-tree-treenode {
+				padding: 8px 0px 8px 8px;
+			}
+			.ant-tree.ant-tree-directory .ant-tree-treenode-selected:hover::before, .ant-tree.ant-tree-directory .ant-tree-treenode-selected::before {
+				background-color: @color05;
+        bottom: 0;
+			}
+      .ant-tree.ant-tree-directory .ant-tree-treenode:hover::before {
+        background-color: @color05;
+        bottom: 0;
+      }
+
+			.ant-tree-treenode-selected {
+				color: @text65;
+			}
+		}
+		.parents {
+			border-top: 1px solid @text15;
+			&:nth-child(1) {
+				border-top: none;
+			}
+			:global {
+				.ant-tree-icon__customize {
+					float: left;
+					display: block;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+.rightInfo {
+	padding: 25px 24px 0 24px;
+	height: 100%;
+	overflow: auto;
+	:global {
+		.ant-table-tbody > tr > td {
+			font-size: 12px;
+		}
+	}
+	.rightTitle {
+		font-size: 16px;
+		font-weight: 500;
+		color: #0F0F0F;
+		line-height: 22px;
+		margin-bottom: 24px;
+	}
+	.rightItemTitle {
+		font-weight: 500;
+		color: #0F0F0F;
+		line-height: 20px;
+		margin-bottom: 16px;
+	}
+	.inputDesc {
+		font-size: 12px;
+		font-weight: 400;
+		color: @text65;
+		line-height: 17px;
+		margin-bottom: 56px;
+	}
+	.editSc {
+		width: 139px;
+		height: 37px;
+		border: 1px solid #D9D9D9;
+		margin-top: 16px;
+		line-height: 37px;
+		text-align: center;
+		color: @primary-color;
+		cursor: pointer;
+		&.disabled {
+			color: @text30 !important;
+			cursor: not-allowed;
+		}
+	}
+	.scriptEdit {
+		margin-right: 8px;
+		vertical-align: text-bottom;
+	}
+
+}
+.tooltipText {
+  font-size: 12px;
+  color: @white85;
+  line-height: 22px;
+}

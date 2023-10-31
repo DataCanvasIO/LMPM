@@ -1,0 +1,176 @@
+.overviewContainer {
+  .descInfo {
+    border: 1px solid #eaeaea;
+    height: 160px;
+    width: 100%;
+    padding: 34px 64px;
+    background: @white100;
+    .descTitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0F0F0F;
+      margin-bottom: 18px;
+    }
+    .info {
+      font-size: 14px;
+      color: @text65;
+      font-weight: 400;
+      .boldText {
+        font-weight: 600;
+      }
+      .linkText {
+        color: #4479EF;
+        margin-left: -10px;
+      }
+    }
+  }
+  .modelContent {
+    padding: 0 64px 37px 64px;
+    .stepsInfo {
+      padding: 55px 0 40px 0;
+      justify-content: space-between;
+      display: flex;
+      .stepItem {
+        width: 240px;
+        position: relative;
+        .title {
+          font-size: 16px;
+          font-size: 20px;
+          font-weight: 500;
+          color: @text65;
+          margin-bottom: 17px;
+        }
+        .stepImg {
+          height: 142px;
+          background: @white100;
+          border-radius: 8px;
+        }
+        .info {
+          width: 100%;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 500;
+          margin-top: 15px;
+        }
+        .desc {
+          text-align: center;
+          font-size: 14px;
+          font-weight: 400;
+          color: @text65;
+        }
+        .arrowIcon {
+          position: absolute;
+          right: 10px;
+          transform: translateY(-50%);
+          top: 50%;
+        }
+      }
+    }
+    .subTotal {
+      background-color: @white100;
+      .subItem {
+        height: 175px;
+        position: relative;
+        &:not(:last-child)::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 40px;
+          bottom: 40px;
+          width: 4px;
+          background: @text09;
+          border-radius: 2px;
+        }
+        .modeItem {
+          width: 150px;
+          margin: 50px auto 40px auto;
+          .modelIcon {
+            float: left;
+            width: 70px;
+            height: 70px;
+            .iconFont {
+              font-size: 55px;
+              padding: 7px 0 7px 12px;
+            }
+          }
+          .title {
+            font-size: 18px;
+            margin-left: 104px;
+            font-size: 16px;
+            font-weight: 400;
+            color: @text50;
+          }
+          .num {
+            font-size: 25px;
+            margin-left: 104px;
+            font-weight: 500;
+            color: @text65;
+          }
+        }
+      }
+    }
+    .promptTable {
+      margin-top: 36px;
+      .promptHeader {
+        height: 52px;
+        background: rgba(129,108,165,0.1);
+        box-shadow: inset 0px -1px 0px 0px @background15;
+        border-radius: 8px 8px 0px 0px;
+        display: flex;
+        align-items: center;
+        padding: 0 33px;
+        justify-content: space-between;
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          color: @background85;
+        }
+      }
+      .promptContent {
+        background-color: @white100;
+        .empty {
+          padding: 24px 0;
+        }
+        .tableItem {
+          height: 56px;
+          padding-left: 33px;
+          box-shadow: inset 0px -1px 0px 0px @background15;
+          & > div {
+            height: 18px;
+            font-size: 14px;
+            font-weight: 400;
+            &:not(:first-child) {
+              padding-left: 20px;
+            }
+          }
+          .tableName {
+            color: @background65;
+          }
+          .tableColIcon {
+            font-size: 16px;
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+          .tableColCopy {
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 3px;
+            color: @primary-color;
+            vertical-align: middle;
+          }
+          .tableUrl, .tableType {
+            color: @text50;
+            width: calc(100% - 40px);
+            vertical-align: middle;
+          }
+          .tableTime {
+            color: @text65;
+            vertical-align: middle;
+            width: calc(100% - 50px);
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

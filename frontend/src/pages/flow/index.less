@@ -1,0 +1,191 @@
+@import '../../styles/index';
+
+.flowDetail {
+	width: 100%;
+	height: 100%;
+	background-color: @white100;
+	.title {
+		height: 81px;
+		background: #F9F7F8;
+		background-color: @white100;
+		line-height: 60px;
+		padding: 0 64px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid @text05;
+		.goFlowList {
+			cursor: pointer;
+			&:hover {
+				color: @primary-color;
+			}
+		}
+		.titleLeft {
+			font-size: 16px;
+			font-weight: 600;
+		}
+		.titleRight {
+			display: flex;
+			align-items: center;
+			.publish {
+				vertical-align: middle;
+				font-size: 24px;
+				color: @primary-color;
+				cursor: pointer;
+				margin: 0 36px;
+				&.readonly {
+					cursor: no-drop;
+				}
+			}
+		}
+	}
+	.main {
+		height: calc(100% - 81px);
+		overflow: auto;
+	}
+}
+.flowList {
+	height: 100%;
+	.title {
+    height: 81px;
+    background: #F9F7F8;
+    background-color: @white100;
+    line-height: 60px;
+    padding: 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .titleLeft {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .titleRight {
+      display: flex;
+      align-items: center;
+    }
+    .searchInput {
+      width: 280px;
+      height: 38px;
+      vertical-align: middle;
+      background: #F7F8FA;
+      border-radius: 8px;
+      input {
+        background: transparent;
+      }
+    }
+		:global {
+			.ant-input-affix-wrapper {
+				border: none;
+			}
+		}
+	}
+	.main {
+		height: calc(100% - 81px);
+		padding: 24px 64px;
+		overflow: auto;
+	}
+	.empty {
+		height: calc(100% - 76px);
+	}
+	.loading {
+		height: calc(100% - 76px);
+		.center()
+	}
+	.filter {
+		display: flex;
+		margin-top: 1px;
+		margin-bottom: 25px;
+		.filterItem {
+			margin-right: 90px;
+			cursor: pointer;
+			color: @text65;
+		}
+		.orderIcon {
+			cursor: pointer;
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			color: #bfbfbf;
+			font-size: 10px;
+			position: relative;
+			margin-left: 4px;
+			top: -4px;
+			.active {
+				color: @primary-color;
+			}
+			& > span:last-child {
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	.listItem {
+		margin-top: 10px;
+		background-color: #fff;
+		padding: 24px 30px;
+		border-radius: 8px;
+		margin-bottom: 24px;
+		.itemTitle {
+			display: flex;
+			font-weight: 500;
+			line-height: 20px;
+			justify-content: space-between;
+			a{
+				&:hover {
+					color: @primary-color;
+				}
+			}
+			.operations {
+				font-size: 16px;
+				width: 178px;
+				>span {
+					cursor: pointer;
+					margin-left: 24px;
+					height: 16px;
+					color: @primary-color;
+				}
+			}
+		}
+		.itemDesc {
+			margin-top: 16px;
+			line-height: 20px;
+			& > div {
+				color: @text50;
+			}
+		}
+		.itemBottom {
+			display: flex;
+			margin-top: 16px;
+			justify-content: space-between;
+			.botLeft {
+				display: flex;
+				font-size: 14px;
+				.pCount {
+					.count {
+						color: @text65;
+					}
+					.text {
+						color: @text30;
+						margin-left: 8px;
+					}
+				}
+				.time {
+					margin-left: 200px;
+					color: @text65;
+				}
+			}
+		}
+		:global {
+			div.ant-typography, .ant-typography p {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.pagi {
+		float: right;
+	}
+}
+.disabled {
+	color: @text30 !important;
+	cursor: not-allowed !important;
+}

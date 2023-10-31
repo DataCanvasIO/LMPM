@@ -1,0 +1,99 @@
+@import '../theme/default.less';
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:transparent;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius:2em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #D6D6D6;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius:2em;
+}
+
+.center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// flex布局，可通过传入的参数设置元素排列方向，水平方向对齐方式  垂直方向对齐方式
+
+.flex(@direction: row, @just: center, @align: center) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @just;
+  align-items: @align;
+}
+
+.clearfix() {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.box(@position: absolute, @top: 0px, @left: 0px, @bottom: 0px, @right: 0px) {
+  position: @position;
+  top: @top;
+  left: @left;
+  bottom: @bottom;
+  right: @right;
+
+}
+
+.tips_style(@width) {
+  border-radius: @border-radius-base;
+  width: @width;
+  height: @height-lg;
+  line-height: @height-lg;
+  padding: 0 @padding-sm;
+  margin-bottom: @margin-xs;
+}
+
+
+
+//方便于table内或者list内容中需要根据宽度而不是字数来隐藏，width可以自定义
+.nameEllipsis(@width) {
+  display: inline-block;
+  width: @width;
+  overflow: hidden;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Placeholder text
+.placeholder(@color: @input-placeholder-color) {
+
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
+  &::placeholder {
+    color: @color;
+  }
+
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,90 @@
+.Resizer {
+  background: @background100;
+  opacity: 0.15;
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.Resizer:hover {
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.Resizer.horizontal {
+  height: 11px;
+  margin: -5px 0;
+  border-top: 5px solid @white0;
+  border-bottom: 5px solid @white0;
+  cursor: row-resize;
+  width: 100%;
+}
+
+.Resizer.horizontal:hover {
+  border-top: 5px solid @black50;
+  border-bottom: 5px solid @black50;
+}
+
+.Resizer.vertical {
+  width: 11px;
+  margin: 0 -5px;
+  border-left: 5px solid @white0;
+  border-right: 5px solid @white0;
+  cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+  border-left: 5px solid @black50;
+  border-right: 5px solid @black50;
+}
+.Resizer.disabled {
+  cursor: not-allowed;
+}
+.Resizer.disabled:hover {
+  border-color: transparent;
+}
+  .toggle{
+    position: absolute;
+    top:50%;
+    left:0;
+  }
+
+  @keyframes ring {
+    from {
+        stroke-dashoffset: 50;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+  }
+
+  .jtk-connector path {
+    animation-name: ring; // donghua
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    stroke-dasharray:5;
+  }
+
+  .jtk-connector.active path {
+    // animation-name: ring;
+    color: @primary-color;
+  }
+
+  .jtk-dragging path {
+    animation-name: null;
+    // animation-duration: 2s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+    // stroke-dasharray:5;
+    // color: @primary-color !important;
+    stroke: @primary-color !important;
+    stroke-width: 2;
+  }
+
+
+

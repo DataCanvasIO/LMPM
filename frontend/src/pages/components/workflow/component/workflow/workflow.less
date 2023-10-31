@@ -1,0 +1,140 @@
+@import '../../style/index.less';
+
+.pm-workflow {
+  display: flex;
+  height: 100%;
+  .panel {
+    height: 100%;
+    width:  auto;
+    position: relative;
+    .itemPanel {
+      background: @white100;
+      width: 237px;
+      height: 100%;
+    }
+    .collapse {
+      width: 18px;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      height: 100%;
+      background: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 11;
+      &Left {
+        left: -18px;
+      }
+      &Right {
+        right: -18px;
+      }
+      &:hover{
+        background-color: @color05;
+      }
+    }
+  }
+  .containerPanel {
+    flex: 1;
+    .dropContainer {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .ableDrag {
+    circle {
+      stroke-width: 1px;
+      stroke: @primary-color !important;
+      fill: @primary-color !important;
+    }
+  }
+  .jtk-dragged {
+    z-index: 2001;
+  }
+  .jtk-endpoint {
+    cursor: crosshair;
+    z-index: 111;
+    background-color: @white100;
+    border: 50%;
+  }
+  .wraperminmap {
+    z-index: 500;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+    width: 150px;
+    height: 150px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 8px 0 @background15;
+  }
+  .minimapselect {
+    background: @background09;
+    position: absolute;
+    z-index: 750;
+    cursor: grab;
+  }
+  .comment {
+    background: #FFF9BC;
+    border: 2px solid #C1DCF7;
+    position: absolute;
+    cursor: move;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding:2px 4px 4px 4px;
+  }
+  .miniNode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: @white100;
+    border-radius: 4px;
+    border: 1px solid @background65;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+  .endpointSourceLabel, .endpointTargetLabel {
+    display: none;
+    z-index: 9;
+    padding: 6px 16px;
+    background: @black75;
+    min-height: 32px;
+    border-radius: 4px;
+    color: @white100;
+    white-space: nowrap;
+    min-width: 76px;
+    div.l {
+      position: absolute;
+      top: -4px;
+      left: 46%;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid @black75;
+    }
+  }
+  .endpointTargetLabel div.l {
+    top: 34px;
+    border-top: 4px solid @black75;
+    border-bottom: none;
+  }
+  .aLabel {
+    display: none;
+    cursor: pointer;
+    background: @primary-color;
+    width: 12px;
+    height: 12px;
+    color: @white100;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: center;
+    font-weight: 300;
+  }
+}

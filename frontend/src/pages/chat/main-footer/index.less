@@ -1,0 +1,232 @@
+.footer {
+  border-radius: 8px;
+  background: @white100;
+  margin: 0 24px;
+  padding: 12px 20px;
+  box-shadow: 0px 2px 12px 0px rgba(206,206,206,0.5);
+  display: flex;
+  .footerLeft {
+    width: calc(100% - 86px);
+    .footerTextarea {
+      flex-grow: 1;
+      position: relative;
+      background: @white100;
+      margin-bottom: 22px;
+      :global {
+        .ant-mentions {
+          border: none;
+          padding-right: 22px;
+          background-color: transparent!important;
+        }
+        .ant-mentions-focused {
+          border: none;
+          box-shadow: none;
+        }
+        textarea {
+          background: @white100;
+          display: block;
+          font-size: 14px;
+          padding: 0;
+          border: 0;
+          line-height: 22px;
+          color: #71777c;
+          resize: none; // 不允许调整元素大小
+          width: 100%;
+          outline: none;
+          &::placeholder {
+            color: #CECECE;
+          }
+          &:nth-child(2) {
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 0 6px;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+    .footerBar {
+      height: 1px;
+      opacity: 0.3;
+      border: 1px solid;
+      border-image: linear-gradient(90deg, rgba(240, 240, 240, 1), rgba(177, 177, 177, 1), rgba(254, 254, 254, 1)) 1 1;
+    }
+    .footerOpeater {
+      position: relative;
+      font-weight: 500;
+      color: #666666;
+      .opeaterTip {
+        font-size: 20px;
+        position: relative;
+        top: 6px;
+      }
+      .opeaterTipDis {
+        cursor: not-allowed;
+      }
+      .footerPopover {
+        position: absolute;
+        top: -302px;
+        left: -20px;
+        height: 300px;
+        width: 328px;
+        background: @white100;
+        box-shadow: 0px 2px 12px 0px rgba(206,206,206,0.5);
+        border-radius: 6px;
+        z-index: 2;
+        :global {
+          ::-webkit-scrollbar {
+            width: 1px;
+          }
+        }
+        .popoverInput {
+          width: 328px;
+          border: none;
+          color: @primary-color;
+          padding: 14px;
+          height: 48px;
+        }
+        .popoverContent {
+          display: flex;
+          height: 252px;
+          border-top: 1px solid rgba(151, 151, 151, 0.3);
+        }
+        .popConLeft {
+          width: 96px;
+          overflow: auto;
+          border-right: 1px solid rgba(151, 151, 151, 0.3);
+        }
+        .popConLefItem {
+          padding: 8px 16px;
+          text-align: left;
+          display: flex;
+          background: @white100;
+          height: 48px;
+          width: 100%;
+          border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+          line-height: 32px;
+          cursor: pointer;
+          .leftItemName {
+            margin-left: 4px;
+            flex: 1;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          &:hover {
+            background: @color15;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .popConLefActive {
+          background: @color15;
+          color: @primary-color;
+        }
+        .popConRight {
+          flex: 1;
+          overflow: auto;
+          :global{
+            .ant-list-item {
+              padding: 8px 16px;
+              display: block;
+              width: 100%;
+              font-weight: 500;
+              height: 48px;
+              line-height: 32px;
+              color: #333;
+              cursor: pointer;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              border-bottom: 1px solid #f0f0f0;
+              text-align: left;
+              &:hover {
+                background: @color15;
+              }
+            }
+          }
+          .conRightList {
+            height: calc(100% - 110px);
+            overflow: auto;
+          }
+          .conRightDesc {
+            color: #666666;
+            height: 102px;
+            margin: 4px;
+            padding: 8px;
+            background: #F9F7F8;
+            border-radius: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            word-break:break-all;
+          }
+          .popConRigActive {
+            background: @color15;
+            color: @primary-color;
+          }
+        }
+        .triangle {
+          height: 0px;
+          width: 0;
+          position: absolute;
+          border-top: 8px solid @white100;
+          border-right: 8px solid transparent;
+          border-left: 8px solid transparent;
+          bottom: -8px;
+          left: 22px;
+        }
+      }
+      .footerPopHide {
+        display: none;
+      }
+    }
+  }
+  .footerRight {
+    width: 48px;
+    height: 48px;
+    margin: 28px 20px 28px 18px;
+    background: @white100;
+    border-radius: 24px;
+    border: 1px solid #EAEAEA;
+    text-align: center;
+    line-height: 28px;
+    cursor:not-allowed;
+    color: @text30;
+    :global {
+      .anticon {
+        cursor:not-allowed;
+      }
+    }
+    .opeaterIcon {
+      font-size: 20px;
+      position: relative;
+      top: 12px;
+    }
+  }
+  .footerActive {
+    cursor: pointer;
+    color: @white88;
+    background: linear-gradient(180deg, #AB74E6 0%, @primary-color 100%);
+    :global {
+      .anticon {
+        cursor: pointer;
+      }
+    }
+  }
+}
+:global {
+  .ant-mentions-dropdown {
+    min-width: 160px;
+    max-width: 500px;
+    .ant-mentions-dropdown-menu-item:hover,.ant-mentions-dropdown-menu-item-active {
+      background-color: rgba(115, 64, 200, 0.15);
+    }
+  }
+}

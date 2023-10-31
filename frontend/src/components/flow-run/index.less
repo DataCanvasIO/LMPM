@@ -1,0 +1,140 @@
+.showStatus {
+	// width: 138px;
+	height: 26px;
+	border-radius: 4px;
+	border: 1px solid rgba(115,64,200,0.32);
+	display: flex;
+	align-items: center;
+	padding: 0 12px;
+	.statusText {
+		margin-left: 8px;
+		font-weight: 400;
+		color: rgba(15, 15, 15, 0.5);
+	}
+	.btn {
+		font-weight: 400;
+		color: #7340C8;
+		line-height: 20px;
+		margin-left: 12px;
+		cursor: pointer;
+	}
+}
+.runModal {
+	.title {
+		font-size: 16px;
+		font-weight: 500;
+		color: rgba(16,38,58,0.85);
+		line-height: 22px;
+		margin-bottom: 25px;
+	}
+	:global {
+    .ant-upload {
+      width: 100%;
+    }
+    .ant-btn-default {
+      width: 100%;
+      color: @primary-color;
+      border-radius: 4px;
+      border: 1px solid @background15;
+    }
+    .anticon-delete,.anticon {
+      color: @primary-color;
+    }
+    .ant-upload-list-item-name {
+      font-weight: 400;
+      color: @background85;
+    }
+    .ant-upload-list-item-info {
+      background: #F9F7F8!important;
+      border-radius: 4px;
+      padding-left: 4px;
+    }
+    .ant-upload-list-item-card-actions-btn {
+      opacity: 1!important;
+    }
+  }
+	.runWrapper {
+		.icon {
+			margin-right: 4px;
+		}
+		.runResult {
+      width: 909px;
+      height: 60px;
+      background: #F9F7F8;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      &>div {
+        height: 28px;
+        border-right: 2px solid @color15;
+        line-height: 28px;
+        padding-left: 25px;
+        width: 33%;
+        &:last-child {
+          border-right: none;
+        }
+      }
+      .priColor {
+        color: @primary-color;
+      }
+      .text {
+        margin-right: 4px;
+        color: @background65;
+      }
+		}
+		.runList {
+			margin-top: 13px;
+			.runItem {
+				width: 909px;
+				min-height: 46px;
+				border-top: 1px solid @text10;
+				display: flex;
+				padding: 12px 0;
+				&:last-child {
+					border-bottom: 1px solid @text10;
+				}
+				&>div {
+					width: 33%;
+					padding: 0 25px;
+					color: rgba(15,15,15,0.65);
+				}
+				.reason {
+					width: 290px;
+					.errorMsg {
+						margin: 10px 0 0 5px;
+						font-size: 12px;
+						border: none;
+						font-weight: 400;
+						line-height: 17px;
+						color: @color50;
+						word-break: break-all;
+						background: #F9F7F8;
+						max-height: 73px !important;
+						&::-webkit-scrollbar {
+							width: 1px;
+						}
+						
+					}
+					:global {
+						.ant-input:focus, .ant-input-focused {
+							box-shadow: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.disabled {
+	color: @text30 !important;
+	cursor: not-allowed !important;
+}
+.noSupport {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	border: 1px solid @text30;
+	font-size: 16px;
+	font-weight: 600;
+}

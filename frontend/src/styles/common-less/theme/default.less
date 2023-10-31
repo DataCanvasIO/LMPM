@@ -1,0 +1,193 @@
+
+// base
+@font-size-sm: 12px;
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+
+// paddings
+@padding-lg: 24px;
+@padding-md: 16px;
+@padding-sm: 12px;
+@padding-xs: 8px;
+
+// margins
+@margin-lg: 24px;
+@margin-md: 16px;
+@margin-sm: 12px;
+@margin-xs: 8px;
+
+// height rules
+@height-base: 32px;
+@height-lg: 40px;
+@height-sm: 24px;
+
+/** 头部导航*/
+@header-bg-color:rgb(16, 38, 58);
+@header-select-bg-color:rgb(25, 118, 210);
+@header-avatar:rgb(0, 57, 108);
+@header-default-font-color:#E4E6EA;
+@header-default-font-color:rgb(228, 230, 234);
+@header-menu-height:50px;
+@header-submenu-height:40px;
+
+/** 默认设置*/
+@blue:rgb(25, 118, 210);
+@activeColor:#1890ff;
+@focusColor:#40a9ff;
+
+//超链接，已选中，确认、提交按钮底色
+@default-color: fade(@blue,100%);
+// 字体超链接
+@default-link-color: fade(@blue,85%);
+// 列表hover状态背景底色
+@default-bg-color: fade(@blue,9%);
+// 暂时未找到已用的
+@box-shadow-color: #D5DFE8;
+
+// 图表成功色
+@chart-color: rgba(19, 194, 194);
+
+/** line up 排队中*/
+@line-up-color: rgba(28, 122, 238);
+
+// 项目提示框颜色区份
+
+/** warning（橘黄色） 异常，未发布，未部署 */
+@warn-icon-color:  rgba(250, 173, 20);
+/** warning 提示色背景 */
+@warn-bg-color:  rgba(255, 251, 230);
+/** warning 提示色边框 */
+@warn-bor-color:  rgba(255, 229, 143);
+
+/** success（绿色） 提示色icon 成功色, 已部署，部署成功，已上线 */
+@suc-icon-color:  rgba(82, 196, 26);
+/** success 提示色背景 */
+@suc-bg-color:  rgba(246, 255, 237);
+/** success 提示色边框 */
+@suc-bor-color:  rgba(183, 235, 143);
+
+/** fail（红色） 失败 */
+@fail-icon-color:  rgba(245, 34, 45);
+/** fail 提示色背景 */
+@fail-bg-color:  rgba(255, 241, 240);
+/** fail 提示色边框 */
+@fail-bor-color:  rgba(255, 163, 158);
+
+/** 通知(蓝色) 运行中，发布中 */
+@mes-icon-color: @default-color;
+/** 通知 提示色背景 */
+@mes-bg-color:  rgba(230, 247, 255);
+/** 通知 提示色边框 */
+@mes-bor-color:  rgba(145, 213, 255);
+
+
+//Font  文本颜色
+// 面包屑当前项
+@fontColor: rgb(16, 38, 58);
+
+@default-font-color:@fontColor;
+// 主标题文字颜色（form中label标题）
+@default-font-title-color:fade(@fontColor, 85%);
+// 正文颜色，输入类文字颜色，操作类涉及文字，鼠标划过hover文字颜色,状态提示类文字，tab无底色时选中状态，icon默认颜色
+@title-font-color:fade(@fontColor, 65%);
+// 次文字颜色，placeholder颜色，tab无底色时未选中状态
+@minor-font-color:fade(@fontColor, 45%);
+// input disable文字颜色，icon disabled状态设计颜色
+@font-disable-color:fade(@fontColor, 25%);
+// 分割线颜色，input默认边框。
+@font-border-color:fade(@fontColor, 15%);
+//鼠标划过hover文字颜色
+@hover-font-color: fade(@fontColor, 85%);
+
+
+
+/** 按钮*/
+@btn-default-bg: @default-color;
+@btn-default-hover-color: @default-color;
+@btn-delete-bg: #E0714F;
+@btn-delete-hover-color: #E0653F;
+// @btn-gray-color:@text-color;
+@btn-gray-bg: #fff;
+@default-white-bg: #fff;
+
+/** 分割线  */
+@divider-color:fade(@fontColor, 15%);
+
+/** input*/
+@input-hover-color:#0C71ED ;
+@input-focus-color:#196DD4 ;
+
+/** slider*/
+@slider-color:#E7EDF5;
+@bg-color:fade(@fontColor, 9%);
+@bg-slider-color: rgba(19, 194, 194, 0.1);
+@bg-slider-fill-color:  rgba(19, 194, 194);
+@bg-color: @default-color;
+
+// 组件/浮层圆角
+@border-radius-base: 4px;
+
+@disabled-color:#f5f5f5;
+@border-color-base:#d9d9d9;
+
+/** 6.2颜色变量*/
+// bg
+@bg-blue1: rgba(60, 136, 212, 1);
+@bg-blue2: rgba(25, 118, 210, 1);
+@bg-blue3: rgba(28, 122, 238, 1);
+@bg-blue4: rgba(230, 247, 255, 1);
+@bg-blue5: rgba(28, 122, 238, 0.09);
+@bg-blue6: rgba(240, 246, 255, 1);
+
+@bg-green1: rgba(28, 196, 196, 1);
+@bg-green2: rgba(82, 196, 26, 1);
+@bg-green3: rgba(19, 194, 194, 0.09);
+@bg-green4: rgba(19, 194, 194, 1);
+@bg-green5: rgba(20, 194, 194, 1);
+
+@bg-yellow1: rgba(247, 181, 0, 1);
+@bg-yellow2: rgba(255, 251, 230, 1);
+@bg-yellow3: rgba(255, 229, 143, 1);
+@bg-yellow4: rgba(250, 173, 20, 1);
+
+@bg-red1: rgba(255, 77, 79, 1);
+@bg-red2: rgba(255, 43, 42, 1);
+
+@bg-blank: rgba(16, 38, 58, 1);
+
+@bg-white: rgba(255, 255, 255, 1);
+
+@bg-grey1: rgba(16, 38, 58, 0.02);
+@bg-grey2: rgba(16, 38, 58, 0.05);
+@bg-gre3: rgba(16, 38, 58, 0.15);
+@bg-grey4: rgba(16, 38, 58, 0.35);
+@bg-grey5: rgba(250, 250, 250, 1);
+@bg-grey6: rgba(89, 89, 89, 1);
+
+// font
+@font-color1: rgba(16, 38, 58, 0.65);
+@font-color2: rgba(16, 38, 58, 0.85);
+@font-color3: rgba(16, 38, 58, 0.45);
+@font-color-red: rgba(255, 77, 79, 1);
+@font-color-blue1: rgba(71, 134, 241, 1);
+@font-color-blue2: rgba(60, 136, 212, 1);
+@font-color-blue3: rgba(28, 122, 238, 0.85);
+@font-color-blue4: rgba(0, 119, 214, 1);
+@font-color-yellow: rgba(239, 143, 63, 1);
+@font-color-green: rgba(19, 194, 194, 1);
+@font-color-active: rgba(25, 118, 210, 1);
+@font-color-link: rgba(25, 118, 210, 0.85);
+
+// border
+@border-color1: rgba(16, 38, 58, 0.15);
+@border-color2: rgba(16, 38, 58, 0.45);
+@border-color3: rgba(151, 151, 151, 1);
+@border-blue1: rgba(145, 213, 255, 1);
+@border-blue2: rgba(28, 122, 238, 0.4);
+
+// chart
+@chart-green: rgba(19, 194, 194, 1);
+@chart-blue: rgba(25, 118, 210, 1);
+@chart-red: rgba(243, 64, 73, 1);
+@chart-grey: rgba(16, 38, 58, 0.45);
+@chart-grey2: rgba(16, 38, 58, 0.25);
