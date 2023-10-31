@@ -1,8 +1,7 @@
 # Prompt Manager
 How can people use large language models more accurately?
 
-![image](/uploads/789b65a674be2fcd9e1356a534a1f04d/image.png)
-
+![image](https://github.com/DataCanvasIO/LMPM/assets/62921331/b9cfac8a-be6e-4865-9639-39ee3de685eb)
 
 
 ## Introduction
@@ -21,7 +20,9 @@ Support publishing prompt workflows as prompt word applications, accessed throug
 
 The prompt word engineering tool supports running in SDK mode and can be quickly integrated into the development environment to help developers complete the construction and use of the prompt word engineering
 
-![image](/uploads/53e338466ee2d048f757796c5b983a17/image.png)
+![image](https://github.com/DataCanvasIO/LMPM/assets/62921331/fe5014df-b9ad-404a-aae3-3ec213a2482c)
+
+
 
 ### Modules
 
@@ -61,7 +62,7 @@ pip install promptmanager
 pmctl service start
 ```
 
-Open Web browser with this URL http://localhost:9999/
+Open Web browser with this URL http://<your ip address>:9999/
 
 ### service start with a port
 
