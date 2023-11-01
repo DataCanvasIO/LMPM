@@ -22,6 +22,9 @@ The prompt word engineering tool supports running in SDK mode and can be quickly
 
 ![image](https://github.com/DataCanvasIO/LMPM/assets/62921331/fe5014df-b9ad-404a-aae3-3ec213a2482c)
 
+## Web UI
+
+![image](https://github.com/DataCanvasIO/LMPM/assets/62921331/895054b7-b34c-4252-9e35-c9730d9f106b)
 
 
 ### Modules
